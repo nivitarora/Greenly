@@ -1,0 +1,17 @@
+body {
+	background: url(http://pimpilla.files.wordpress.com/2013/06/bjhsdgj.jpg);
+	background-repeat:repeat-y;
+	background-position:center center;
+	background-attachment:scroll;
+	background-size:100% 100%;
+}
+.ui-page {
+	background: transparent;
+}
+.ui-content{
+	background: transparent;
+}
+.fontWhatever{
+	font-size:25px;
+	color: black;
+}

@@ -1,0 +1,5 @@
+# Greenly
+
+A mobile app my group and I created as our final project during the Girls Who Code Summer Immersion Program. 
+
+We had all seen the many environmental apps already out there, but we wanted to create a more personalized, interactive one, so that we could engage our users and get them to save more. We wanted to motivate people by spreading awareness about environmental issues, and guide them if they wanted to help, but didn't know where to start. Our app offers different challenges, and completing them saves some amount of water or electricity - for example, you could start washing your dishes with cold water rather than hot water. The app keeps track of how much you are saving, and gives you a better idea of the extent to which you can help the planet through your small actions. Then there is a leaderboard that shows the top users who are saving the most, which encourages other users to save even more. We also give ideas on how to recycle, and daily fun facts about the environment to raise awareness. 

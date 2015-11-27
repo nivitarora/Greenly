@@ -1,0 +1,256 @@
+<!-- photo urls, more fun facts,  -->
+
+<head>
+	<title>Greenly</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+	<script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
+	<script type="text/javascript" src="jasminumSCRIPT.js"></script>
+	<link rel="stylesheet" type="text/css" href="jasminumSTYLE.css">
+</head>
+<body>
+	<!--login/acount pg-->
+	<div data-role = "page" id = "pageFirst">
+        <h1 style="font-size:40px;text-align:center;color:#00CC33;">Living Life Greenly</h1>
+        <!-- <h1 align="center"> <img src="logo.jpg"></h1> -->
+        <h1 style="text-align:center;"><img src="http://ec.europa.eu/digital-agenda/sites/digital-agenda/files/environment%20%281%29.jpg" width="50%" height="50%"/></h1>
+		<div data-role = "controlgroup">
+			<!-- login button -->
+			<a class = "ui-btn ui-icon-carat-r ui-btn-icon-right" href = "#pageLogin" id="buttonLogin" style="background-color:#ADD8E6"> Log In </a>
+			<!-- create account button -->
+			<br>
+			<a class = "ui-btn ui-icon-carat-r ui-btn-icon-right" href = "#pageAccount" id="buttonCreate" style="background-color:#ADD8E6"> Create a <b>free</b> account </a>
+		</div>
+	</div>
+
+	<!-- login pg2 -->
+	<div data-role = "page" id = "pageLogin">
+			<h1 align="center"> Please Log In </h1>
+        <text>Type in your username:</text>
+            <input type="text" data-clear-btn="true" name="username" id="username" value="">
+		<a class = "ui-btn ui-icon-carat-r ui-btn-icon-right" id="buttonLogin2" style="background-color:#ADD8E6"> Log In </a>
+	</div>
+
+    <!-- home pg -->
+    <div data-role = "page" id = "pageMain">
+    	<div data-role = "header">
+    		<!-- Navigation Bar -->
+			<div data-role="navbar" class = "ui-state-persist">
+  				<ul>
+    				<li><a href = "#pageMain" data-icon="home" id="homebutton" style="background-color:#B0C4DE">Home</a></li>
+    				<li><a href="#waterpage" data-icon="cloud" id="buttonWater" style="background-color:#B0C4DE">Water Activities</a></li>
+    				<li><a href="#Electricity" data-icon="power" id="buttonElectricity" style="background-color:#B0C4DE">Electricity Activities</a></li>
+    				<li><a href="#Recycling" data-icon="recycle" id="buttonRecycling" style="background-color:#B0C4DE">Recycle</a></li>
+    				<li><a href="#FunFacts" data-icon="comment" id="buttonFacts" style="background-color:#B0C4DE">Fun Facts</a></li>
+    				<li><a href="#pageProfile" data-icon="user" id="buttonProfile" style="background-color:#B0C4DE">Profile</a></li>
+  				</ul>
+			</div>
+        <h1> High Scores </h1>
+        </div>
+            <!-- Water Leaderboard -->
+            <h1 style="font-size:30px;text-align:center;"> Water Leader Board </h1>
+			<h1 style="text-align:center;"><img src="http://repignite.com/wp-content/uploads/2013/11/competition-leaderboard-trophy.jpg" class="align-center"/></h1>
+			<ul data-role="listview" data-count-theme="b" data-inset="true">
+				<li><a href="#"><span id="leaderboard1"></span><span class="ui-li-count" id="leaderboard1gal"></span></a></li>
+			</ul>
+			<ul data-role="listview" data-count-theme="b" data-inset="true">
+			    <li><a href="#"><span id="leaderboard2"></span><span class="ui-li-count" id="leaderboard2gal"></span></a></li>
+			</ul>
+			<ul data-role="listview" data-count-theme="b" data-inset="true">
+				<li><a href="#"><span id="leaderboard3"></span><span class="ui-li-count" id="leaderboard3gal"></span></a></li>
+			</ul>
+			<!-- Electricity Leaderboard -->
+		    <br><br>
+            <h1 style="font-size:30px;text-align:center;"> Electricity Leader Board </h1>
+			<h1 style="text-align:center;"><img src="http://repignite.com/wp-content/uploads/2013/11/competition-leaderboard-trophy.jpg" class="align-center"/></h1>
+			<ul data-role="listview" data-count-theme="b" data-inset="true">
+			    <li><a href="#"><span id="Eleaderboard1"></span><span class="ui-li-count" id="Eleaderboard1watts"></span></a></li>
+			</ul>
+			<ul data-role="listview" data-count-theme="b" data-inset="true">
+			    <li><a href="#"><span id="Eleaderboard2"></span><span class="ui-li-count" id="Eleaderboard2watts"></span></a></li>
+			</ul>
+			<ul data-role="listview" data-count-theme="b" data-inset="true">
+			    <li><a href="#"><span id="Eleaderboard3"></span><span class="ui-li-count" id="Eleaderboard3watts"></span></a></li>
+			</ul>
+    </div>
+
+	<!-- water pg -->
+	<div data-role = "page" id = "waterpage">
+		<form>
+	    	<div data-role = "header">
+	    	<!-- Navigation Bar -->
+				<div data-role="navbar" class = "ui-state-persist">
+  					<ul>
+  						<li><a href = "#pageMain" data-icon="home" id="homebutton" style="background-color:#ADD8E6"> Home </a></li>
+    					<li><a href="#waterpage" data-icon="cloud" id="buttonWater" style="background-color:#ADD8E6">Water Activities</a></li>
+    					<li><a href="#Electricity" data-icon="power" id="buttonElectricity" style="background-color:#ADD8E6">Electricity Activities</a></li>
+    					<li><a href="#Recycling" data-icon="recycle" id="buttonRecycling" style="background-color:#ADD8E6">Recycle</a></li>
+    					<li><a href="#FunFacts" data-icon="comment" id="buttonFacts" style="background-color:#ADD8E6">Fun Facts</a></li>
+    					<li><a href="#pageProfile" data-icon="user" id="buttonProfile" style="background-color:#ADD8E6">Profile</a></li>
+  					</ul>
+				</div>
+				<h1> Check the completed activities</h1>
+			</div>
+	        <input type="checkbox" name="check0" id="check0">
+	        <label for="check0">Take shorter showers by 10 minutes.</label>
+	        <input type="checkbox" name="check1" id="check1">
+	        <label for="check1">Turn off the faucet while blushing your teeth.</label>
+	        <input type="checkbox" name="check2" id="check2">
+	        <label for="check2">Wash full loads instead of 2 small ones in washing machine.</label>
+			<input type="checkbox" name="check3" id="check3">
+	        <label for="check3">Wash full loads instead of multiple small ones in dish washer.</label>
+			<input type="checkbox" name="check4" id="check4">
+	        <label for="check4">Fix leaky faucet.</label>
+		</form>
+		<br>
+		<a href="#pageProfile" class="ui-btn" id='saveWater'>Save Water!</a>
+	</div>
+
+	<!-- electricity page -->
+	<div data-role = "page" id = "Electricity">
+		<form>
+			<div data-role = "header">
+		    	<!-- Navigation Bar -->
+				<div data-role="navbar" class = "ui-state-persist">
+  					<ul>
+  						<li><a href = "#pageMain" data-icon="home" id="homebutton" style="background-color:#F0E68C"> Home </a></li>
+    					<li><a href="#waterpage" data-icon="cloud" id="buttonWater" style="background-color:#F0E68C">Water Activities</a></li>
+    					<li><a href="#Electricity" data-icon="power" id="buttonElectricity" style="background-color:#F0E68C">Electricity Activities</a></li>
+    					<li><a href="#Recycling" data-icon="recycle" id="buttonRecycling" style="background-color:#F0E68C">Recycle</a></li>
+    					<li><a href="#FunFacts" data-icon="comment" id="buttonFacts" style="background-color:#F0E68C">Fun Facts</a></li>
+    					<li><a href="#pageProfile" data-icon="user" id="buttonProfile" style="background-color:#F0E68C">Profile</a></li>
+  					</ul>
+				</div>
+				<h1>Check the completed activities</h1>
+			</div>
+	        <input type="checkbox" name="check5" id="check5">
+	        <label for="check5">Turn off lights when you're not using them.</label>
+	        <input type="checkbox" name="check6" id="check6">
+	        <label for="check6">Put your computer to sleep or shutdown when not using.</label>
+	        <input type="checkbox" name="check7" id="check7">
+	        <label for="check7">Replace standard bulbs with compact fluorescent light bulbs. </label>
+			<input type="checkbox" name="check8" id="check8">
+	        <label for="check8">Wash laundry in cold water instead of hot or warm.</label>
+			<input type="checkbox" name="check9" id="check9">
+	        <label for="check9">Use ceiling fans instead of the air conditioner.</label>
+		</form>
+		<br>
+		<a href="#pageProfile" class="ui-btn" id='saveElectricity'>Save Electricity!</a>
+	</div>
+
+	<!-- recycling pg -->
+	<div data-role = "page" id = "Recycling">
+		<div data-role = "header">
+			<div data-role="navbar" class = "ui-state-persist">
+				<ul>
+				<li><a href = "#pageMain" data-icon="home" id="homebutton" style="background-color:#90EE90"> Home </a></li>
+				<li><a href="#waterpage" data-icon="cloud" id="buttonWater" style="background-color:#90EE90">Water Activities</a></li>
+				<li><a href="#Electricity" data-icon="power" id="buttonElectricity" style="background-color:#90EE90">Electricity Activities</a></li>
+				<li><a href="#Recycling" data-icon="recycle" id="buttonRecycling" style="background-color:#90EE90">Recycle</a></li>
+				<li><a href="#FunFacts" data-icon="comment" id="buttonFacts" style="background-color:#90EE90">Fun Facts</a></li>
+				<li><a href="#pageProfile" data-icon="user" id="buttonProfile" style="background-color:#90EE90">Profile</a></li>
+				</ul>
+			</div>
+		<h1 style="color:#006400;"> Recycling </h1>
+        </div>
+		<p style="color:#006400;text-align:center;"> <b>Here are some recycling ideas you can try!</b></p>
+		<!-- Recycling List -->
+		<ul data-role="listview" data-split-icon ="carat-r" id ="recyclelist">
+			<li><a href="http://www.pinterest.com/pin/196751077446137115/" target="_blank"><img src="http://media-cache-ec0.pinimg.com/736x/3a/9f/af/3a9fafae53d1c074cbe2f0de5bd3c007.jpg">Juice Carton Wallets</a></li>
+			<li><a href ="http://www.pinterest.com/pin/196751077445930937/" target="_blank"><img src="http://media-cache-ak0.pinimg.com/736x/fe/0a/59/fe0a59981e3ae5b3464c914988551366.jpg" target="_blank">Egg Carton Mini Copter</a></li>
+			<li><a href ="http://www.pinterest.com/pin/277464027016525371/" target="_blank"><img src="http://media-cache-ec0.pinimg.com/736x/c1/9c/f1/c19cf10bd4da2065c14239c99e951e2d.jpg">Lightbulb Vase</a></li>
+			<li><a href="http://www.pinterest.com/pin/372813675373999199/" target="_blank"><img src="http://media-cache-ec0.pinimg.com/736x/5e/32/0a/5e320a10fe810ae353ea5311976a00b8.jpg">Milk Jug Lunch Box</a></li>
+			<li><a href="http://www.pinterest.com/pin/567031409306002432/" target="_blank"><img src="http://media-cache-ec0.pinimg.com/736x/35/25/c0/3525c03c17b37f85c10459dc018af07f.jpg">Tin Can Organizer</a></li>
+		</ul>
+	</div>
+
+	<!-- fun facts pg -->
+	<div data-role = "page" id = "FunFacts">
+		<div data-role = "header">
+		<!-- Navigation Bar -->
+	    <div data-role="navbar" class = "ui-state-persist">
+            <ul>
+            <li><a href ="#pageMain" data-icon="home" id="homebutton" style="background-color:#DDA0DD"> Home </a></li>
+            <li><a href="#waterpage" data-icon="cloud" id="buttonWater" style="background-color:#DDA0DD">Water Activities	
+            </a></li>
+            <li><a href="#Electricity" data-icon="power" id="buttonElectricity" style="background-color:#DDA0DD">Electricity Activities</a></li>
+            <li><a href="#Recycling" data-icon="recycle" id="buttonRecycling" style="background-color:#DDA0DD">Recycle
+            </a></li>
+            <li><a href="#FunFacts" data-icon="comment" id="buttonFacts" style="background-color:#DDA0DD">Fun Facts</a></li>
+            <li><a href="#pageProfile" data-icon="user" id="buttonProfile" style="background-color:#DDA0DD">Profile</a></li>
+            </ul>
+        </div> 		
+	    <h1 style="color:#000066;text-align:center"> Fun Facts </h1>
+    </div>
+	<p style="color:#000066;text-align:center;">
+				<b>Here are some fun facts about the environemnt. Click on them to learn even more about the fact!</b> 
+				<br>
+				<b> To see even more fun facts, sign up to get a FREE email or text or alert (or all of them, whichever you prefer!), EVERY DAY with a FUN FACT about the world you live in.</b>
+			</p>
+			<!-- button for subscribing -->
+			<p style="color:#000066;text-align:center;">
+			<b>Click the signup button to get your daily fun facts:</b> 
+			<a class = "ui-btn ui-btn-inline" href = "#pageSubscribe" id="buttonSubscribe" style="background-color:#ADD8E6"> SIGN UP </a> 
+			</p>
+			<!--fun facts list-->
+			<ul data-role="listview" data-split-icon ="carat-r" id ="factsList">
+				<li><a href="http://online.wsj.com/news/articles/SB10000872396390443589304577633410750041328" target="_blank"><img src="http://www.couponingtodisney.com/wp-content/uploads/2011/05/aluminumCan.jpg">During the time it takes you to read this sentence, 50,000 twelve-ounce aluminum cans are made</a></li>
+				<li><a href ="http://www.benefits-of-recycling.com/recyclenewspapers/" target="_blank"><img src="http://mountcarmelareapubliclibrary.com/yahoo_site_admin/assets/images/newspapers1.339110050_std.jpg">If all our newspaper was recycled, we could save about 250 million trees each year - so get recycling!</a></li>
+				<li><a href ="http://saveourseas.com/articles/our_oceans_plastic_peril" target="_blank"><img src="http://4.bp.blogspot.com/_3msbUdwKpos/So6zPLwLzyI/AAAAAAAAA4E/VUXbH5gd7Hs/s400/Ocean+plastic">Plastic bags and other plastic garbage thrown into the ocean kill as many as 1 million sea creatures every year</a></li>
+				<li><a href="http://www.reuseit.com/facts-and-myths/use-and-toss-plastic-bottle-facts.htm" target="_blank"><img src="http://www.inhabitat.com/wp-content/uploads/plasticbottles_detail.jpg">Americans use 2.5 million plastic bottles every hour, most of which are thrown away</a></li>
+				<li><a href="http://everydaylife.globalpost.com/long-glass-bottle-degrade-landfill-40893.html" target="_blank"><img src="http://s.hswstatic.com/gif/recycled-wine-bottle-crafts-1.jpg">A modern glass bottle takes 4,000 years or more to decompose</a></li>
+				<li><a href="http://www.greenpeace.org/international/en/campaigns/oceans/pollution/trash-vortex/" target="_blank"><img src="http://4.bp.blogspot.com/_3msbUdwKpos/So6zPLwLzyI/AAAAAAAAA4E/VUXbH5gd7Hs/s400/Ocean+plastic">Plastic in oceans break down into such small segments that pieces from a one liter bottle could reach every mile of beach in the world.</a></li>
+				<li><a href="http://www.reuseit.com/facts-and-myths/facts-about-the-plastic-bag-pandemic.htm" target="_blank"><img src="http://blogs.ocweekly.com/navelgazing/plastic-bag_thank-you.jpg">Approximately 380 billion plastic bags are used in the United States every year. That is more than 1,200 bags per US resident, per year.</a></li>
+				<li><a href="http://www.nrdc.org/energy/forestsnotfuel/" target="_blank"><img src="http://www.dulabab.com/upload/2009/09/rainforest-deforestation.jpg">The US has less than 4% of its forests left.</a></li>
+			</ul>
+	</div>
+
+	<!-- profile pg -->
+	<div data-role = "page" id = "pageProfile">
+		<div data-role = "header">
+			<div data-role="navbar" class = "ui-state-persist">
+				<ul>
+				<li><a href = "#pageMain" data-icon="home" id="homebutton" style="background-color:#FFB6C1"> Home </a></li>
+				<li><a href="#waterpage" data-icon="cloud" id="buttonWater" style="background-color:#FFB6C1">Water Activities</a></li>
+				<li><a href="#Electricity" data-icon="power" id="buttonElectricity" style="background-color:#FFB6C1">Electricity Activities</a></li>
+				<li><a href="#Recycling" data-icon="recycle" id="buttonRecycling" style="background-color:#FFB6C1">Recycle</a></li>
+				<li><a href="#FunFacts" data-icon="comment" id="buttonFacts" style="background-color:#FFB6C1">Fun Facts</a></li>
+				<li><a href="#pageProfile" data-icon="user" id="buttonProfile" style="background-color:#FFB6C1">Profile</a></li>
+				</ul>
+			</div>
+			<h1> Your profile </h1>
+		</div>
+		<p class = "fontWhatever"><b>Username:<div id="profileusername" class="fontWhatever"></div></b></p>
+		<p class = "fontWhatever"><b>Total gallons saved:<div id="myResults" class="fontWhatever"></div></b></p>
+		<p class = "fontWhatever"><b>Total watts saved:<div id="myWatts" class="fontWhatever"></div></b></p>
+		<div align = "right" id="share-buttons">
+			<a href="http://twitter.com/share?&text=I just helped our world by saving water and energy!! Can you save more than I did? Help save our planet.&hashtags=livinglifegreenly" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/></a>
+			<a href="mailto:?Subject=Living Life Greenly&Body=I%20just%20helped%20save%20our%20world%20by%20saving%20water%20and%20energy!!%20Can%20you%20save%20more%20than%20I%20did?%20Help%20save%20our%20planet.%20#livinglifegreenly"><img src="http://www.simplesharebuttons.com/images/somacro/email.png" alt="Email"/></a>
+		</div>			
+		<a class = "ui-btn ui-icon-carat-r ui-btn-icon-right" href = "#pageFirst" id="buttonLogout" style="background-color:#ADD8E6"> Logout </a>
+	</div>
+
+	<!-- new account pg -->
+	<div data-role = "page" id = "pageAccount">
+        <h1 align="center">Type in a new username that you want to use</h1>
+		<input type="text" data-clear-btn="true" name="newUser" id="newUser" value="">
+		<footer>
+			<!-- add account button -->
+			<a class = "ui-btn" id="buttonAdd"> Click Here to Create Your Account </a>
+		</footer>
+	</div>
+
+	<!--Subscription Page-->
+	<div data-role = "page" id = "pageSubscribe">
+		<h1 align="center"> Sign up for a fun environmental fact of the day (it's FREE) </h1>
+		<p> Please decide if you want to get your fun facts by email, text, or alert box (or a combination), and then enter that information </p>
+		<input type="text" data-clear-btn="true" name="email" id="email" value="email (for emails)">
+		<input type="text" data-clear-btn="true" name="phone" id="phone" value="cell phone number (for texts)">
+		<input type="checkbox" name="alert" id="alert">
+		<label for="alert">check this if you would like to receive facts by alert boxes</label>
+		<br>
+		<a class = "ui-btn" href = "#pageProfile" id="subscribe"> Sign Up </a>
+		<a href="#pageMain" class="ui-btn ui-btn-inline">Cancel</a>
+	</div>
+</body>

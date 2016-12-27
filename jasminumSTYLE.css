@@ -5,13 +5,21 @@ body {
 	background-attachment:scroll;
 	background-size:100% 100%;
 }
+
 .ui-page {
 	background: transparent;
 }
+
 .ui-content{
 	background: transparent;
 }
+
 .fontWhatever{
 	font-size:25px;
 	color: black;
+}
+
+.fontProfilePage{
+	font-size:25px;
+	color: white;
 }

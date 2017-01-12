@@ -14,13 +14,10 @@
 	<div data-role = "page" id = "pageFirst">
         <h1 style="font-size:40px;text-align:center;color:#00CC33;">Living Life Greenly</h1>
         <h1 align="center"> <img src="eco-friendly.jpg"></h1>
-		<div data-role = "controlgroup">
 			<!-- login button -->
-			<center><a class = "ui-btn ui-btn-inline" href = "#pageLogin" id="buttonLogin" style="background-color:#ADD8E6"> Log In </a></center>
+			<center><a class = "ui-btn ui-btn-inline ui-corner-all" href = "#pageLogin" id="buttonLogin" style="background-color:#ADD8E6"> Log In </a></center>
 			<!-- create account button -->
-			<br>
-			<center><a class = "ui-btn ui-btn-inline" href = "#pageAccount" id="buttonCreate" style="background-color:#ADD8E6"> Create a Free Account </a></center>
-		</div>
+			<center><a class = "ui-btn ui-btn-inline ui-corner-all" href = "#pageAccount" id="buttonCreate" style="background-color:#ADD8E6"> Create a Free Account </a></center>
 	</div>
 
 	<!-- login pg -->
@@ -28,7 +25,8 @@
 			<h1 align="center" class = "whiteText"> Please Log In </h1>
         <p class = "whiteText">Type in your username:</p>
             <input type="text" data-clear-btn="true" name="username" id="username" value="">
-		<a class = "ui-btn ui-icon-carat-r ui-btn-icon-right" id="buttonLogin2" style="background-color:#ADD8E6"> Log In </a>
+        <break>
+		<center><a class = "ui-btn ui-btn-inline ui-corner-all" id="buttonLogin2" style="background-color:#ADD8E6"> Log In </a></center>
 	</div>
 	
 	<!-- new account pg -->
@@ -37,7 +35,7 @@
 		<input type="text" data-clear-btn="true" name="newUser" id="newUser" value="">
 		<footer>
 			<!-- add account button -->
-			<a class = "ui-btn" id="buttonAdd"> Click Here to Create Your Account </a>
+			<center><a class = "ui-btn ui-btn-inline ui-corner-all" id="buttonAdd"> Create Account </a></center>
 		</footer>
 	</div>
 
@@ -113,7 +111,7 @@
 	        <label for="check4">Fix leaky faucet.</label>
 		</form>
 		<br>
-		<a href="#pageProfile" class="ui-btn" id='saveWater'>Save Water!</a>
+		<center><a href="#pageProfile" class="ui-btn ui-btn-inline ui-corner-all" id='saveWater'>Save Water!</a></center>
 	</div>
 
 	<!-- electricity page -->
@@ -145,7 +143,7 @@
 	        <label for="check9">Use ceiling fans instead of the air conditioner.</label>
 		</form>
 		<br>
-		<a href="#pageProfile" class="ui-btn" id='saveElectricity'>Save Electricity!</a>
+		<center><a href="#pageProfile" class="ui-btn ui-btn-inline ui-corner-all" id='saveElectricity'>Save Electricity!</a></center>
 	</div>
 
 	<!-- recycling pg -->
@@ -200,7 +198,7 @@
 			<!-- button for subscribing -->
 			<p style="color:#000066;text-align:center;">
 			<b>Click the signup button to get your daily fun facts:</b> 
-			<a class = "ui-btn ui-btn-inline" href = "#pageSubscribe" id="buttonSubscribe" style="background-color:#ADD8E6"> SIGN UP </a> 
+			<a class = "ui-btn ui-btn-inline ui-corner-all" href = "#pageSubscribe" id="buttonSubscribe" style="background-color:#ADD8E6"> SIGN UP </a> 
 			</p>
 			<!--fun facts list-->
 			<ul data-role="listview" data-split-icon ="carat-r" id ="factsList">
@@ -233,11 +231,13 @@
 		<p class = "fontProfilePage"><b>Username:<div id="profileusername" class="fontProfilePage"></div></b></p>
 		<p class = "fontProfilePage"><b>Total gallons saved:<div id="myResults" class="fontProfilePage"></div></b></p>
 		<p class = "fontProfilePage"><b>Total watts saved:<div id="myWatts" class="fontProfilePage"></div></b></p>
-		<div align = "right" id="share-buttons">
+		<br>
+		<h1 style="font-size:20px;">Share your accomplishments and encourage others to save the planet as well !</b></h1>
+		<div align = "left" id="share-buttons">
 			<a href="http://twitter.com/share?&text=I just helped our world by saving water and energy!! Can you save more than I did? Help save our planet.&hashtags=livinglifegreenly" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/></a>
 			<a href="mailto:?Subject=Living Life Greenly&Body=I%20just%20helped%20save%20our%20world%20by%20saving%20water%20and%20energy!!%20Can%20you%20save%20more%20than%20I%20did?%20Help%20save%20our%20planet.%20#livinglifegreenly"><img src="http://www.simplesharebuttons.com/images/somacro/email.png" alt="Email"/></a>
 		</div>			
-		<a class = "ui-btn ui-icon-carat-r ui-btn-icon-right" href = "#pageFirst" id="buttonLogout" style="background-color:#ADD8E6"> Logout </a>
+		<center><a class = "ui-btn ui-btn-inline ui-corner-all" href = "#pageFirst" id="buttonLogout" style="background-color:#ADD8E6"> Logout </a></center>
 	</div>
 
 	<!--Subscription Page-->
